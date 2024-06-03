@@ -1,0 +1,100 @@
+---
+title: 'Meag-SAE : Optimisation de fonctions'
+author: "Loucas BURELLIER A1"
+date: ''
+output:
+  html_document:
+    df_print: paged
+editor_options:
+  markdown:
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Présentation de l'étude
+
+Pour la création d'un logiciel de gestion de fêtes médiévales a l'attention des mairies de france.
+
+
+Nous cherchons ici a determiner si oui ou non le logiciel devrait comprendre deux versions, une "standard" et une "premium" \\
+
+Pour cela, les professionnels de l'entreprise ont determiné pour nous le coût de maintenance/SAV et le prix annuel de chacune des versions, ces derniers sont basés sur le prix de dévellopement de chacune des versions. De plus le service statistique a prévu grace a des enquête auprès des futurs clients un maximum de 3000 clients, dont 10% seraient susceptible d'opter pour la version "premium" du logiciel. Le service souhaite néammoins savoir jusqu'a combien de clients l'entreprise resterai rentable avec le schema de maintenance/SAV actuel.
+
+
+## Variables
+
+On appelle ${d_1,d_2}$ le cout de développement de chacune des versions $(d_1,d_2) \in \mathbb{R*}^2$
+
+On appelle ${n}$ le nombre de clients du logiciel $n \in \mathbb{R*}$
+
+On appelle $f_1,f_2$ les fonctions permettant de calculer les revenus degagés par la location du logiciel pour chacune des versions en fonction du prix de dévellopement et du nombre de clients. Ces dernieres sont definies de la façon suivante :
+$f_1(n,d_1), = (0.1*n)*d_1*10^{-3}$
+$f_2(n,d_2) = (0.9*n)*d_2*10^{-4}$
+
+On appelle $g_1,g_2$ les fonctions permettant de calculer le cout de maintenance/SAV pour chacune des versions en fonction du prix de dévellopement et du nombre de clients. Ces dernieres sont definies de la façon suivante :
+$g_1(n,d_1) = d_1^{1.5} * (n*0.1)^{1.5} * 10^{-7}$
+$g_2(n,d_2) = d_2^{1.5} * (n*0.9)^{1.5} * 10^{-7}$
+
+
+
+## Fonction a optimiser
+
+La fonction $h(n,d_1,d_2)$ que nous allons chercher a optimiser renvoie un benefice pour 1 an, il est néammoins facile de l'utiliser pour faire un bilan comme nous allons le voir par la suite.
+
+$$h(n,d_1,d_2) = f_1(n,d_1)+f_2(n,d_2)-g_1(n,d_1)-g_2(n,d_2)$$
+sois en devellopant chacune des fonctions : 
+$$h(n,d_1,d_2) = ((n*0.1) * d_1 * 10^{-3}) + ((n*0.9)*d_2*10^{-4}) - (d_1^{1.5}*(n*0.1)^{1.5}*10^{-7}) - (d_2^{1.5}*(n*0.9)^{1.5}*10^{-7})$$
+
+## Fonction bilan
+
+Soit $b(a,n,d_1,d_2)$ la fonction permettant de faire le bilan sur un nombre d'année defini par sa variable $a \in \mathbb{N}$
+
+$b$ est definie de la facon suivante :
+$$b(a,n,d_1,d_2) = a*h(n,d_1,d_2) -(d_1+d_2)$$
+
+b(x,y)=y x*10^(-2.5)-x^(1.5) y^(1.5)*10^(-6)
+a(x,y)=y x*10^(-3)-x^(1.25) y^(1.5)*10^(-5.75)
+
+
+V2
+a(x,y)=y x*10^(-3)-x^(1.25) y^(1.5)*10^(-5.75)
+
+ici prix = nombre clients * prix de dev *10^-3
+couts = prix de dev^1.5 * nombredeclients^1.5 * CoefCoutVersionLourde
+
+
+b(x,y)=y x*10^(-3)-x^(1.5) y^(1.5)*10^(-6.75)
+
+```{r}
+fonctionAmaximiser <- function(par) {
+  x <- par[1]
+  y <- par[2]
+  n <- par[3]
+  res <- n*0.1 * x * 10^(-2.5) + n*0.9 * y * 10^(-3) - (x^1.5 * (n*0.1)^1.5 * 10^(-6) + y^1.25 *(n*0.9)^1.5 *10^(-5.75))
+  return(-res)  # Nous renvoyons ici -res pour maximiser le resultat pendant l'optimisation
+}
+
+# Point de départ initial pour x, y et n
+initial <- c(1, 1, 1)  
+
+# On definis ici les bornes de nos differentes valeurs, ces dernieres sont toute positive et n a pour maximum 3000
+maximum <- c(50000, 10000, 3000)
+minimum <- c(0, 0, 0)
+
+
+# Utiliser optim avec méthode L-BFGS-B pour pouvoir utiliser les bornes
+result <- optim(par = initial, fn = fonctionAmaximiser, method = "L-BFGS-B", lower = minimum, upper = maximum)
+
+# Afficher les résultats
+cat("Valeurs optimales de x, y et n:", result$par, "\n")
+cat("Valeur de la fonction a optimiser à ces valeurs optimales:", -result$value, "\n")
+cat("benefices au bout de 1 an :",-(result$value)-(result$par[1])-(result$par[2]),"\n")
+cat("benefices au bout de 2 ans :",2*(-result$value)-result$par[1]-result$par[2],"\n")
+cat("benefices au bout de 5 ans :",5*(-result$value)-result$par[1]-result$par[2],"\n")
+cat("benefices au bout de 10 ans :",10*(-result$value)-result$par[1]-result$par[2],"\n")
+
+```
+

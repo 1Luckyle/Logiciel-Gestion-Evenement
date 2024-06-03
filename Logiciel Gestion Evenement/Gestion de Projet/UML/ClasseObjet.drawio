@@ -1,0 +1,104 @@
+<mxfile host="app.diagrams.net" modified="2024-05-17T15:15:24.987Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0" etag="cCNi0pGjICiW2PHrCZgr" version="24.4.4" type="device">
+  <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
+    <mxGraphModel dx="1687" dy="915" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-8" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="241" as="sourcePoint" />
+            <mxPoint x="300" y="181" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="260" y="181" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-11" value="Evenement" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="241" width="194" height="201" as="geometry">
+            <mxRectangle x="340" y="240" width="100" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-20" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="_UPy-BjfEJS5X98Td9vm-11" target="_UPy-BjfEJS5X98Td9vm-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="200" as="sourcePoint" />
+            <mxPoint x="100" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-24" value="&lt;div align=&quot;center&quot;&gt;nom = Fête médiévale de Dourdan&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;ville = Dourdan&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;codePostal = 91410 &lt;br&gt;&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;adresse = Place Général de Gaulle&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;blasion = bourdanlogo.png&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="_UPy-BjfEJS5X98Td9vm-11">
+          <mxGeometry y="30" width="194" height="161" as="geometry" />
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-14" value="Planning" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="521" width="194" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-29" value="&lt;div&gt;&lt;div align=&quot;center&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;dateDebut = 01/06/2024&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;dateFin = 02/06/2024&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;dateActuelle =17/05/2024&lt;/span&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="_UPy-BjfEJS5X98Td9vm-14">
+          <mxGeometry y="30" width="194" height="161" as="geometry" />
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-25" value="Organisateur" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="141" width="194" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-31" value="&lt;div align=&quot;center&quot;&gt;nom = François Château&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="_UPy-BjfEJS5X98Td9vm-25">
+          <mxGeometry y="29" width="194" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-27" value="Activité" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="791" width="194" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-30" value="&lt;div&gt;nom = Atelier de tannerie&lt;br&gt;&lt;/div&gt;&lt;div&gt;date = 01/06/2024&lt;/div&gt;&lt;div&gt;durée = 0:20:00&lt;/div&gt;&lt;div&gt;stand = Le Beau Cuir&lt;/div&gt;&lt;div&gt;Exposant = Jean-Jac Ruisseau&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="_UPy-BjfEJS5X98Td9vm-27">
+          <mxGeometry y="30" width="194" height="161" as="geometry" />
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-28" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="_UPy-BjfEJS5X98Td9vm-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="771" as="sourcePoint" />
+            <mxPoint x="260" y="721" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-32" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="240" as="sourcePoint" />
+            <mxPoint x="760" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="720" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-33" value="Stand" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="240" width="194" height="201" as="geometry">
+            <mxRectangle x="340" y="240" width="100" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-34" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="_UPy-BjfEJS5X98Td9vm-33" target="_UPy-BjfEJS5X98Td9vm-36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="200" as="sourcePoint" />
+            <mxPoint x="100" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-35" value="&lt;div&gt;nom = La chansonette&lt;/div&gt;&lt;div&gt;emplacement = place 12&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="_UPy-BjfEJS5X98Td9vm-33">
+          <mxGeometry y="30" width="194" height="161" as="geometry" />
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-36" value="Produit" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="621" y="520" width="194" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-37" value="&lt;div&gt;nom = Bière Blonde&lt;br&gt;&lt;/div&gt;&lt;div&gt;- prixVente : 4€&lt;br&gt;&lt;/div&gt;&lt;div&gt;prixFournisseur : 1.5€&lt;br&gt;&lt;/div&gt;&lt;div&gt;fournisseur : Derek Binouz&lt;/div&gt;&lt;div&gt;aConserverAuFroid : oui &lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="_UPy-BjfEJS5X98Td9vm-36">
+          <mxGeometry y="30" width="194" height="161" as="geometry" />
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-38" value="Exposant" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="140" width="194" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-39" value="&lt;div align=&quot;center&quot;&gt;nom =Jules Badourd&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="_UPy-BjfEJS5X98Td9vm-38">
+          <mxGeometry y="29" width="194" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-40" value="Produit" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="623" y="791" width="194" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-41" value="detailInventaire = 524 &lt;br&gt;&lt;div&gt;ventes = 136&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="_UPy-BjfEJS5X98Td9vm-40">
+          <mxGeometry y="30" width="194" height="161" as="geometry" />
+        </mxCell>
+        <mxCell id="_UPy-BjfEJS5X98Td9vm-42" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="_UPy-BjfEJS5X98Td9vm-40">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="772" as="sourcePoint" />
+            <mxPoint x="720" y="722" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

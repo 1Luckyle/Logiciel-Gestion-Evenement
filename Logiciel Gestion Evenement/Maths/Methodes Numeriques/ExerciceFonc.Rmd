@@ -1,0 +1,30 @@
+---
+title: "Meag-SAE : Optimisation de fonctions"
+author: "Loucas BURELLIER A1"
+date: ""
+output: pdf_document
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+On appelle ${p_1,p_2}$ le prix annuel de chacune des versions $(p_1,p_2) \in \mathbb{N}^2$
+On appelle ${d_1,d_2}$ le cout de développement de chacune des versions $(d_1,d_2) \in \mathbb{R*}^2$ 
+On appelle ${c_1,c_2}$ le cout de maintenance/SAV annuel, avec $(c_1,c_2) \in \mathbb{R*}^2$ et $c_i = d_i*0.10$
+On appelle ${n_1,n_2}$ le nombre de clients de chacune des versions $(n_1,n_2) \in \mathbb{N}^2$
+
+$$f(n) = n_1*p_1+n_2*p_2 - t(c_1+c_2) -(d_1+d_2)$$
+
+
+
+\begin{eqnarray*}
+ & t & \in <2,4> \\
+ & v & \in \mathbb{N} \\
+ & p & \in \mathbb{R*} \\
+ & i & \in \mathbb{R*}
+\end{eqnarray*}
+
